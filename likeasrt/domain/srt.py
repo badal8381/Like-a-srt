@@ -43,7 +43,5 @@ def get_related_file_name(
     Returns a new file name, starting from an original file and applying the given
     suffix. The suffix is supposed to contain the result file extension!
     """
-    filename = original_file_path.split(".")
-    filename[-1] = suffix
-    file_name = ".".join(filename)
+    file_name = original_file_path.replace(".wav", ".srt")
     return file_name 
