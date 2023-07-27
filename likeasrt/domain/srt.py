@@ -45,5 +45,5 @@ def get_related_file_name(
     """
     filename = original_file_path.split(".")
     filename[-1] = suffix
-    file_name = "".join(filename)
+    file_name = ".".join(filename)
     return file_name 
