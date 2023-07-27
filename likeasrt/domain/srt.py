@@ -43,5 +43,7 @@ def get_related_file_name(
     Returns a new file name, starting from an original file and applying the given
     suffix. The suffix is supposed to contain the result file extension!
     """
-    _, file_name, _ = split_path(str(original_file_path))
-    return file_name + suffix
+    filename = original_file_path.split(".")
+    filename[-1] = suffix
+    file_name = "".join(filename)
+    return file_name 
